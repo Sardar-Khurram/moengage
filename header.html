@@ -5,229 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cigarettes Email Template</title>
-    <style>
-        /* Font Face Declarations */
-        /* Note: Most email clients don't support @font-face. These fonts will fallback to web-safe alternatives. */
-        @font-face {
-            font-family: 'Druk';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_Druk-BoldItalic-Trial') format('opentype');
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Druk';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_Druk-HeavyItalic-Trial') format('opentype');
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Druk';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_Druk-HeavyItalic') format('opentype');
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Druk Text';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_DrukText-BoldItalic-Trial') format('opentype');
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Druk Text';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_DrukText-HeavyItalic-Trial') format('opentype');
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Helvetica Neue LT Pro';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_HelveticaNeueLTPro-BdCn') format('opentype');
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Helvetica Neue LT Pro';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_HelveticaNeueLTPro-BlkExO') format('opentype');
-            font-weight: 900;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Helvetica Neue LT Pro';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_HelveticaNeueLTPro-Cn') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'ITC Franklin Gothic Std';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_ITCFranklinGothicStd-Book') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'ITC Franklin Gothic Std';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_ITCFranklinGothicStd-BookIt') format('opentype');
-            font-weight: normal;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'ITC Franklin Gothic Std';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_ITCFranklinGothicStd-Demi') format('opentype');
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'ITC Franklin Gothic Std';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_ITCFranklinGothicStd-Hvy') format('opentype');
-            font-weight: 900;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'ITC Franklin Gothic Std';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_ITCFranklinGothicStd-HvyIt') format('opentype');
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'ITC Franklin Gothic Std';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_ITCFranklinGothicStd-Med') format('opentype');
-            font-weight: 500;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Myriad Pro';
-            src: url('https://drive.google.com/uc?export=download&id=FILE_ID_FOR_MyriadPro-Regular') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .main-table {
-            width: 100%;
-            /* max-width: 600px; */
-            margin: 0 auto;
-            /* border: 2px solid #000000; */
-            overflow: hidden;
-        }
-
-        .header-bg {
-            background-image: url('assets/header_bg.jpeg');
-            background-repeat: no-repeat;
-        }
-
-        .header-bg1 {
-            background-image: url('assets/GettyImages-2154373840.jpg');
-            background-repeat: no-repeat;
-        }
-
-        .logo-cell {
-            /* padding: 17px 13px; */
-            width: 129px;
-        }
-
-        .warning-cell {
-            padding: 17px 13px;
-            text-align: right;
-            vertical-align: top;
-        }
-
-        .warning-box {
-            font-family: 'Helvetica Neue LT Pro', Arial, sans-serif;
-            border: 2px solid #000;
-            padding: 17px;
-            background-color: #fff;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .cigarettes-text {
-            font-family: 'Helvetica Neue LT Pro', Arial, sans-serif;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1.3px;
-            text-align: right;
-            margin-bottom: 7px;
-        }
-
-        .warning-title {
-            font-family: 'Helvetica Neue LT Pro', Arial, sans-serif;
-            font-weight: bold;
-            font-size: 9px;
-        }
-
-        .warning-content {
-            font-family: 'Helvetica Neue LT Pro', Arial, sans-serif;
-            font-size: 9px;
-            line-height: 1.4;
-        }
-
-        .red-banner {
-            background-color: #c8102e;
-            padding: 5px 17px;
-            text-align: center;
-        }
-
-        .banner-text {
-            font-family: 'Druk Text', Arial, sans-serif;
-            color: #fff;
-            font-size: 36px;
-            font-weight: bold;
-            font-style: italic;
-            letter-spacing: 1.3px;
-            margin: 0;
-        }
-
-        /* Responsive styles for mobile devices */
-        @media only screen and (max-width: 550px) {
-            .feature-item {
-                display: block !important;
-                width: 100% !important;
-                padding: 8px !important;
-                text-align: center !important;
-            }
-
-            .feature-icon {
-                width: 40px !important;
-                margin-right: 10px;
-            }
-
-            .feature-text {
-                font-size: 24px !important;
-                display: inline-block !important;
-                margin-left: 5px !important;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;">
 
 
     <!-- Main table encapsulating everything -->
-    <table class="main-table" cellpadding="0" cellspacing="0" border="0">
+    <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; margin: 0 auto; overflow: hidden;">
 
         <thead style="background-image: url('4899 LD leafpattern.png');">
             <!-- Header Row with Logo and Warning -->
-            <tr class="header-bg">
+            <tr style="background-image: url('assets/header_bg.jpeg'); background-repeat: no-repeat;">
                 <!-- Logo Cell -->
-                <td class="logo-cell" valign="top">
+                <td valign="top" style="width: 129px;">
                     <table cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <td>
@@ -239,11 +29,11 @@
                 </td>
 
                 <!-- Warning Cell -->
-                <td class="warning-cell" valign="top">
-                    <div class="cigarettes-text">CIGARETTES</div>
-                    <div class="warning-box">
-                        <span class=""><strong>SURGEON GENERAL'S WARNING:</strong></span>
-                        <span class="">Quitting Smoking </span><br><span> Now Greatly Reduces Serious
+                <td valign="top" style="padding: 17px 13px; text-align: right; vertical-align: top;">
+                    <div style="font-family: 'Helvetica Neue LT Pro', Arial, sans-serif; font-size: 12px; font-weight: bold; letter-spacing: 1.3px; text-align: right; margin-bottom: 7px;">CIGARETTES</div>
+                    <div style="font-family: 'Helvetica Neue LT Pro', Arial, sans-serif; border: 2px solid #000; padding: 17px; background-color: #fff; display: inline-block; text-align: left;">
+                        <span><strong>SURGEON GENERAL'S WARNING:</strong></span>
+                        <span>Quitting Smoking </span><br><span> Now Greatly Reduces Serious
                             Risks to Your Health.</span>
                     </div>
                 </td>
@@ -251,11 +41,11 @@
 
             <!-- Red Banner Section -->
             <tr>
-                <td colspan="2" class="red-banner">
+                <td colspan="2" style="background-color: #c8102e; padding: 5px 17px; text-align: center;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <td>
-                                <h1 class="banner-text">WELCOME TO QUALITY+</h1>
+                                <h1 style="font-family: 'Druk Text', Arial, sans-serif; color: #fff; font-size: 36px; font-weight: bold; font-style: italic; letter-spacing: 1.3px; margin: 0;">WELCOME TO QUALITY+</h1>
                             </td>
                         </tr>
                     </table>
@@ -268,15 +58,13 @@
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <!-- Top Leaf Tobacco -->
-                            <td class="feature-item" style="width: 33.33%; padding:10px 0px; text-align: center;">
+                            <td style="width: 33.33%; padding:10px 0px; text-align: center;">
                                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                     <tr>
                                         <td style="text-align: center;">
                                             <img src="assets/LD Icons American Blend.png" alt="Leaf"
-                                                class="feature-icon"
                                                 style="width: 25px; height: auto; display: inline-block; vertical-align: middle;">
-                                            <span class="feature-text"
-                                                style="font-family: 'Druk Text', Arial, sans-serif; font-size: 13px; color: #888; font-style: italic; font-weight: bold; margin-left: 5px; vertical-align: middle;">TOP
+                                            <span style="font-family: 'Druk Text', Arial, sans-serif; font-size: 13px; color: #888; font-style: italic; font-weight: bold; margin-left: 5px; vertical-align: middle;">TOP
                                                 LEAF TOBACCO</span>
                                         </td>
                                     </tr>
@@ -284,15 +72,13 @@
                             </td>
 
                             <!-- American Blend -->
-                            <td class="feature-item" style="width: 33.33%; padding:10px 0px; text-align: center;">
+                            <td style="width: 33.33%; padding:10px 0px; text-align: center;">
                                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                     <tr>
                                         <td style="text-align: center;">
                                             <img src="assets/LD Icons Double Layered Foil.png" alt="American"
-                                                class="feature-icon"
                                                 style="width: 25px; height: auto; display: inline-block; vertical-align: middle;">
-                                            <span class="feature-text"
-                                                style="font-family: 'Druk Text', Arial, sans-serif; font-size: 13px; color: #888; font-style: italic; font-weight: bold; margin-left: 5px; vertical-align: middle;">AMERICAN
+                                            <span style="font-family: 'Druk Text', Arial, sans-serif; font-size: 13px; color: #888; font-style: italic; font-weight: bold; margin-left: 5px; vertical-align: middle;">AMERICAN
                                                 BLEND</span>
                                         </td>
                                     </tr>
@@ -300,14 +86,13 @@
                             </td>
 
                             <!-- Double Layered Foil -->
-                            <td class="feature-item" style="width: 33.33%; padding: 10px 0px; text-align: center;">
+                            <td style="width: 33.33%; padding: 10px 0px; text-align: center;">
                                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                     <tr>
                                         <td style="text-align: center;">
-                                            <img src="assets/LD Icons Top Leaf.png" alt="Foil" class="feature-icon"
+                                            <img src="assets/LD Icons Top Leaf.png" alt="Foil"
                                                 style="width: 25px; height: auto; display: inline-block; vertical-align: middle;">
-                                            <span class="feature-text"
-                                                style="font-family: 'Druk Text', Arial, sans-serif; font-size: 13px; color: #888; font-style: italic; font-weight: bold; margin-left: 5px; vertical-align: middle;">DOUBLE
+                                            <span style="font-family: 'Druk Text', Arial, sans-serif; font-size: 13px; color: #888; font-style: italic; font-weight: bold; margin-left: 5px; vertical-align: middle;">DOUBLE
                                                 LAYERED FOIL</span>
                                         </td>
                                     </tr>
