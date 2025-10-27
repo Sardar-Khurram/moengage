@@ -204,15 +204,15 @@
         }
 
         .wheel-column:nth-child(1) .wheel-items {
-            animation: spin1 10s cubic-bezier(0.33, 0.01, 0.15, 1) forwards;
+            animation: spin1-var1 10s cubic-bezier(0.33, 0.01, 0.15, 1) forwards;
         }
 
         .wheel-column:nth-child(2) .wheel-items {
-            animation: spin2 11s cubic-bezier(0.33, 0.01, 0.15, 1) forwards;
+            animation: spin2-var2 11s cubic-bezier(0.33, 0.01, 0.15, 1) forwards;
         }
 
         .wheel-column:nth-child(3) .wheel-items {
-            animation: spin3 12s cubic-bezier(0.33, 0.01, 0.15, 1) forwards;
+            animation: spin3-var3 12s cubic-bezier(0.33, 0.01, 0.15, 1) forwards;
         }
 
         .wheel-item {
@@ -417,7 +417,7 @@
                                                         <!-- Main Heading -->
 
 
-                                                        <h1
+                                                        <h1  class="fade-animation"
                                                             style="font-family: 'Druk', Arial, sans-serif; color: #ffffff; font-size: 120px; font-weight: 900; font-style: italic; margin: 0 0 18px 0; line-height: 1.1; text-transform: uppercase; letter-spacing: 2.8px;">
 
                                                             EARN<br>
@@ -432,8 +432,7 @@
                                                                 <td
                                                                     style="background-color: #d51e21; padding: 13px 38px; text-align: center; border-radius: 5px; transform: skew(-10deg); box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);">
                                                                     <a href="#"
-                                                                        style="font-family: 'Druk', Arial, sans-serif; color: white; text-decoration: none; font-size: 32px; font-weight: 900; font-style: italic; letter-spacing: 3px; text-transform: uppercase;">TAKE
-                                                                        THE SURVEY</a>
+                                                                        style="font-family: 'Druk', Arial, sans-serif; color: white; text-decoration: none; font-size: 32px; font-weight: 900; font-style: italic; letter-spacing: 3px; text-transform: uppercase;">START EARNING!</a>
                                                                 </td>
 
 
@@ -484,7 +483,7 @@
                                                 </h1>
 
                                                 <!-- Animated Wheel Slots -->
-                                                <div class="wheel-wrapper" style="margin-bottom: 15px;">
+                                                <div class="wheel-wrapper" style="margin-bottom: 20px;">
                                                     <div class="wheel-container">
                                                         <!-- Wheel 1 -->
                                                         <div class="wheel-column">
@@ -845,89 +844,6 @@
     </tfoot>
 
     </table>
-
-    <script>
-        (function() {
-            // Function to get random duration between 8-15 seconds
-            function getRandomDuration() {
-                return Math.floor(Math.random() * (15 - 8 + 1)) + 8;
-            }
-
-            // Function to get random stop position (in pixels)
-            // Each item is 120px, so we can stop at multiples of 120px
-            // We want to stop at positions that show different items in center
-            function getRandomStopPositions() {
-                // Available items (9 unique items, indices 0-8)
-                var items = [
-                    'ACCOUNT CREATION',
-                    'REBATES', 
-                    'EMAIL CODES',
-                    'Bonus Code',
-                    'LD STORE',
-                    'UPLOAD RECEIPT',
-                    'LD WORLD',
-                    'DIRECT MAIL BONUS CODE',
-                    'BIRTHDAY BONUS'
-                ];
-                
-                // Shuffle and pick 3 different positions
-                var shuffled = items.slice();
-                for (var i = shuffled.length - 1; i > 0; i--) {
-                    var j = Math.floor(Math.random() * (i + 1));
-                    var temp = shuffled[i];
-                    shuffled[i] = shuffled[j];
-                    shuffled[j] = temp;
-                }
-                
-                // Get 3 different indices
-                var selectedIndices = [
-                    items.indexOf(shuffled[0]),
-                    items.indexOf(shuffled[1]),
-                    items.indexOf(shuffled[2])
-                ];
-                
-                // Convert indices to pixel positions (each item is 120px)
-                // Add base offset to account for initial position
-                return selectedIndices.map(function(index) {
-                    return (index * 120) + 600; // 600px base offset for smooth animation
-                });
-            }
-
-            // Get random stop positions ensuring all three are different
-            var stopPositions = getRandomStopPositions();
-            
-            // Get random durations for each wheel
-            var durations = [
-                getRandomDuration(),
-                getRandomDuration(),
-                getRandomDuration()
-            ];
-
-            // Get wheel elements
-            var wheels = document.querySelectorAll('.wheel-column .wheel-items');
-            
-            // Apply animations to each wheel
-            wheels.forEach(function(wheel, index) {
-                var duration = durations[index];
-                var stopPosition = stopPositions[index];
-                
-                // Create unique keyframe animation
-                var animationName = 'spin-random-' + index + '-' + Date.now();
-                var keyframes = '@keyframes ' + animationName + ' {' +
-                    '0% { transform: translateY(0); }' +
-                    '100% { transform: translateY(-' + stopPosition + 'px); }' +
-                '}';
-                
-                // Add keyframes to page
-                var style = document.createElement('style');
-                style.innerHTML = keyframes;
-                document.head.appendChild(style);
-                
-                // Apply animation
-                wheel.style.animation = animationName + ' ' + duration + 's cubic-bezier(0.33, 0.01, 0.15, 1) forwards';
-            });
-        })();
-    </script>
 
 </body>
 
